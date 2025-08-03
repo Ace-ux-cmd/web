@@ -176,7 +176,7 @@ loadrequest(contact);
 
 document.getElementById("submitBtn").addEventListener("click", (event)=>{
 event.preventDefault();
-  alert ("Error; ArcLight servers are temporarily unavailable. Please Use the links Below to Get in touch")
+  alert ("❌Connection Error📡📶; \n ArcLight servers are temporarily unavailable. Please Use the links Below to Get in touch")
   });
   //Events
   document.getElementById("extraCmd").addEventListener("click", (event)=>{
