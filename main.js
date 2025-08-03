@@ -152,7 +152,7 @@ loadrequest(archives);
 
 document.querySelectorAll(".docs").forEach(e =>{
     e.addEventListener("click", (event)=>{event.preventDefault();
-    alert("Docs are Currently being uploaded, Please stay in touch for more info")
+    alert("❌Decryption failed: \n Please stay in touch for more info Or come back later when Server is Secure")
   })
   });
 
@@ -176,7 +176,7 @@ loadrequest(contact);
 
 document.getElementById("submitBtn").addEventListener("click", (event)=>{
 event.preventDefault();
-  alert ("Feature Coming Soon, Use the links Below to Get in touch")
+  alert ("Error; ArcLight servers are temporarily unavailable. Please Use the links Below to Get in touch")
   });
   //Events
   document.getElementById("extraCmd").addEventListener("click", (event)=>{
