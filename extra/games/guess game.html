@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<title>Guess the Number Game</title>
+<style>
+body{
+  background: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  color: #00ffff;
+  font-family: 'Share Tech Mono', monospace;
+  padding: 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#board {
+  display: grid;
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+  border: 1px solid #00ffff33;
+  border-radius: 4px;
+}
+
+.correct-position { background-color: #4caf50; color: #0f0f0f; }
+.correct-digit { background-color: #ffeb3b; color: #0f0f0f; }
+
+input, select, button {
+  margin: 5px;
+  padding: 0.5rem 0.8rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  background: #111;
+  color: #00ffff;
+  border: 1px solid #00ffff33;
+  border-radius: 5px;
+  outline: none;
+}
+
+button:hover {
+  background: #00cccc;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+#guessContainer, #restart{
+  display: none;
+}
+#restart:hover{
+  background: red;
+  transition: background 5s ease;
+  cursor: pointer;
+}
+ </style>
+</head>
+<body>
+
+<h1>Guess the Number</h1>
+<div id = "diffContainer">
+<label for="difficulty">Difficulty:</label>
+<select id="difficulty">
+  <option value="4-10">4 digits, 10 tries</option>
+  <option value="5-12">5 digits, 12 tries</option>
+  <option value="6-15">6 digits, 15 tries</option>
+</select>
+
+<button id="startBtn">Start Game</button>
+</div>
+<br><br>
+
+  <button id="restart">Restart</button>
+
+<div id="board"></div>
+<div id="guessContainer">
+<input type="number" id="guessInput" placeholder="Enter your guess">
+<button id="guessBtn">Guess</button>
+</div>
+<div id="result"></div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
