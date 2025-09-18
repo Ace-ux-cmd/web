@@ -38,26 +38,17 @@ function checkGuess(secret, guess) {
   
   let secretCopy = secret.split("");
   
-  // Count correct positions
-  for (let i = 0; i < digits; i++) {
-    if (secret[i] === guess[i]) {
-      correctPositions++;
-      secretCopy[i] = null; // remove for digit count
-    }
-  }
-  
-  // Count correct digits
-  for (let i = 0; i < digits; i++) {
-    const idx = secretCopy.indexOf(guess[i]);
-    if (idx !== -1) {
-      correctDigits++;
-      secretCopy[idx] = null;
-    }
-  }
-  
-  return { correctDigits, correctPositions };
+for (let i = 0; i < secret.length; i++) {
+  if (secret[i] == guess[i]) correctPositions++
 }
+// Step 2: count correct digits (anywhere in secret, but avoid double-counting)
+for (let i = 0; i < secret.length; i++) {
+  if (secret.includes(guess[i])) correctDigits++
+}
+return { correctDigits, correctPositions };
 
+  }
+  
 function fillRow(guess, result) {
   const rowStart = currentTry * digits;
   for (let i = 0; i < digits; i++) {
