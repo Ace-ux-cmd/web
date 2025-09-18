@@ -81,6 +81,7 @@ document.getElementById("restart").addEventListener("click", () => {
   document.getElementById("guessContainer").style.display="none"
   document.getElementById("restart").style.display="none"
   }
+  document.getElementById("board").style.display="none"
 })
 
 guessBtn.addEventListener("click", () => {
